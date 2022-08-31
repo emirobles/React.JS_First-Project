@@ -1,26 +1,22 @@
 import logo from './logo.svg';
 import kenshin from './kenshin.JPG';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Navbar from './components/navegacion/Navbar'
+import Inicio from './components/paginas/Inicio'
+import Productos from './components/paginas/Productos'
+import Items from './components/paginas/Items'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Próximamente podrás conocer la nueva App
-        </p>
-        <img src={logo} className="App-logo" alt="logo" />
-        <img src={kenshin} alt="logo" />       
-        
-        <a
-          className="App-link"
-          href="https://www.instagram.com/kenshinanimestore/?hl=es"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Siguenos en Instagram
-        </a>
-      </header>
+      <Router>
+        <Navbar></Navbar>
+      </Router>
+
+
+      
       <footer className='App-footer'>
         <p> By Emilce Robles </p>
       </footer>
