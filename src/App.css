@@ -1,5 +1,12 @@
+body {
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
+  background-color: #ff9a02;
+  color:rgb(240, 240, 198)
+  
 }
 
 .App-logo {
@@ -46,6 +53,3 @@
   }
 }
 
-body {
-  background-color: #282c34;
-}

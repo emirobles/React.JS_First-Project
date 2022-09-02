@@ -1,34 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Carrito from '../CartWidget.js';
 
-const Navbar = () => {
+function ColorSchemesExample() {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
-                <div className="container-fluid">
-                    <a class="navbar-brand" href="#">Kenshin Anime Store</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Otros items</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-      
-        </div>
-  )
+        <>
+            <Navbar bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">Kenshin Anime Sore</Navbar.Brand>
+                    <Nav className="me-auto">                        
+                        <Nav.Link href="#home">Inicio</Nav.Link>
+                        <Nav.Link href="#features">Productos</Nav.Link>
+                        <Nav.Link href="#pricing">Items</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>            
+        </>
+    );
 }
 
-export default Navbar
+export default ColorSchemesExample;
