@@ -8,6 +8,7 @@ import Items from './components/paginas/Items'
 import { render } from '@testing-library/react';
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './components/ItemListContainer';
+import Contador from "./components/Contador";
 
 
 const App = () => {
@@ -20,9 +21,9 @@ const App = () => {
         crossorigin="anonymous"
       />      
       <Navbar></Navbar>
-      <CartWidget cart="5" />
-      <ItemListContainer nombre="Andres" apellido="Nazzari"></ItemListContainer>
-       
+      <CartWidget />
+      <Contador></Contador>
+      <ItemListContainer nombre="Andres" apellido="Nazzari"></ItemListContainer>      
       <footer className='App-footer'>
         <p> By Emilce Robles </p>
       </footer>

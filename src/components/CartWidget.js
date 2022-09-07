@@ -1,7 +1,9 @@
 import React from 'react'
 import carritoLogo from '../shopping-cart-.png';
+import {numero} from './Contador'
+import Contador from './Contador'
 
-const CartWidget = ({ cart }) => {
+const CartWidget = ({ numero }) => {
   return (
     <div> 
           <img
@@ -10,8 +12,8 @@ const CartWidget = ({ cart }) => {
               width="30"
               height="30"
               className="d-inline-block align-top"
-          />{''}
-          En total hay {cart} productos
+          />
+          <span>{numero}</span>          
     </div>
   )
 }
