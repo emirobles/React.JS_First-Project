@@ -8,10 +8,13 @@ import Items from './components/paginas/Items'
 import { render } from '@testing-library/react';
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './components/ItemListContainer';
-import Contador from "./components/Contador";
+import ItemCount from "./components/ItemCount";
 
 
 const App = () => {
+  const onAdd = (valor) => {
+    console.log(`Compraste ${valor} productos`);
+  }
   return (
     <div className="App">
       <link
@@ -21,8 +24,8 @@ const App = () => {
         crossorigin="anonymous"
       />      
       <Navbar></Navbar>
-      <CartWidget />
-      <Contador></Contador>
+      <CartWidget/>
+      <ItemCount stock={10} initial={1} onAdd={onAdd}/>
       <ItemListContainer nombre="Andres" apellido="Nazzari"></ItemListContainer>      
       <footer className='App-footer'>
         <p> By Emilce Robles </p>

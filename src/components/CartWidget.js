@@ -1,7 +1,7 @@
 import React from 'react'
 import carritoLogo from '../shopping-cart-.png';
-import {numero} from './Contador'
-import Contador from './Contador'
+import {numero} from './ItemCount'
+import ItemCount from './ItemCount'
 
 const CartWidget = ({ numero }) => {
   return (
