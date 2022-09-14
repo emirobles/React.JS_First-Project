@@ -5,8 +5,11 @@ import ItemList from './ItemList';
 
 const ItemListContainer = (props) => {
     return (
-        <div>Hola {props.nombre} {props.apellido} </div>
-        <ItemList/>
+        <>
+            <div className="greet">Hola {props.nombre} {props.apellido} </div>
+            <h1>Tenemos las siguientes ofertas</h1> 
+            <ItemList></ItemList>        
+        </>
     )
 }
 

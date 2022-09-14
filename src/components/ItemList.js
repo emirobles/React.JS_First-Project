@@ -1,5 +1,6 @@
-import React from 'react'
-import { useEffect } from 'react';
+import React from 'react';
+import Item from './Item';
+import { useEffect, useState } from 'react';
 import { getProducts } from '../api';
 
 const ItemList = () => {
@@ -17,9 +18,7 @@ const ItemList = () => {
     <ul>
         {products.map(item =>(
             <Item key = {item.id} item = {item} />
-
-        ))}
-      
+        ))}      
     </ul>
   )
 }

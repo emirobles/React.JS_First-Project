@@ -3,17 +3,12 @@ import ItemList from './ItemList'
 
 const Item = ({item}) => {
   return (
-    <div>
-        {item.map((ItemList)=> {
-            return (
-                <ItemList
-                key={ItemList.id}
-                img={ItemList.img}
-                title={ItemList.title}
-                price={ItemList.price}
-                />
-            )
-        })}
+    <div className='cardsItems'>
+        <div >
+          <h5 className='titleItem'>{item.title}</h5>
+          <img src = {item.pictureUrl}/>
+          <p className='price'>Precio: ${item.price}</p>
+        </div>       
       
     </div>
   )

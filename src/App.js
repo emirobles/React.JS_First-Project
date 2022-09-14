@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Navbar from './components/navegacion/Navbar'
@@ -9,24 +8,27 @@ import { render } from '@testing-library/react';
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from "./components/ItemCount";
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { useEffect, useState } from 'react';
+import { getItem } from './api';
 
+/*<ItemCount stock={10} initial={1} onAdd={onAdd} />*/
 
 const App = () => {
+  const [item, setItem] = useState({});
+  useEffect(() => {
+    getItem().then(valor => setItem(valor));
+  }, []);
   const onAdd = (valor) => {
     console.log(`Compraste ${valor} productos`);
   }
   return (
-    <div className="App">
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-        crossorigin="anonymous"
-      />      
-      <Navbar></Navbar>
-      <CartWidget/>
-      <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-      <ItemListContainer nombre="Andres" apellido="Nazzari"></ItemListContainer>      
+    <div className="App">         
+      <Navbar></Navbar>      
+      <ItemListContainer nombre="Andres" apellido="Nazzari" ></ItemListContainer>
+        
+      <ItemDetailContainer item= {item}/>          
+         
       <footer className='App-footer'>
         <p> By Emilce Robles </p>
       </footer>

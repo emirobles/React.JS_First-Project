@@ -3,7 +3,7 @@ export const getProducts = () => new Promise ((resolve, reject) => {
         {
             id: 1,
             title: 'Remeras KNY',
-            description: 'Modelo Nezuko',
+            description: 'Modelo Nezuko - Sublimación de calidad',
             price: 1800,
             pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_810544-MLA47783492736_102021-W.jpg',
             stock: 10,

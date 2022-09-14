@@ -1,25 +1,25 @@
-import React from 'react'
-import {useState} from 'react'
+import React from 'react';
+import {useState} from 'react';
 
-function ItemCount(stock, initial, onAdd) {
-  let [numero, setNumero] = useState(initial)
+function ItemCount({stock, initial, onAdd}) {
+  const [numero, setNumero] = useState(initial);
+  const [btnDisabled, setBtnDisabled] = useState(true);
 
   function aumentar() {
-    setNumero(numero + 1)
+    setNumero(numero + 1);
+    numero == stock ? setBtnDisabled(true) : setBtnDisabled(false);
   }
   function disminuir() {
-    setNumero(numero - 1)
+    setNumero(numero - 1);    
   }
   return (
     <div>
-        <button disable={numero <= 1} onClick={disminuir}>-</button>
-        <p>{numero}</p>        
-        <button disable={numero >= stock} onClick={aumentar}>+</button>
+        <button className={btnDisabled ? `buttonDisabled` : ''} onClick={disminuir}>-</button>
+        <span>{numero}</span>        
+        <button className={btnDisabled ? `buttonDisabled` : ''} onClick={aumentar}>+</button>
         <div>
-          <button disable={stock <= 0} onClick={() => onAdd(numero)}>Agregar al Carrito</button>
-        </div>
-                
-      
+          <button className={btnDisabled ? `buttonDisabled` : ''} onClick={() => onAdd(numero)}>Agregar al Carrito</button>
+        </div>  
     </div>
   )
 }

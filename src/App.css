@@ -1,10 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   background-color: #282c34;
+  text-align: center;
+}
+
+h1 {
+  color:#ecc377;
 }
 
 .App {
   text-align: center;
-  background-color: #ff9a02;
+  background-image: url(https://i.pinimg.com/originals/ea/85/c3/ea85c3be1f0d8622474d807b3d0727f7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color:rgb(240, 240, 198)
   
 }
@@ -34,8 +46,7 @@ body {
 
 .App-footer {
   padding: 20px;  
-  background-color: #d45129;  
-  display: flex;
+  background-color: #d45129;
   text-align: center;
   color: beige;
 }
@@ -51,5 +62,51 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.titleItem {
+  color:#282c34;
+
+}
+
+.greet{
+  background-color: red;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.cardItem{
+  background-color: #252221;
+  padding: 20px;
+  height: 650px;
+  width: 450px;  
+  margin-left: 500px;
+}
+
+.cardItem img{
+  height: 400px;
+  
+}
+
+.price{
+  color: rgb(148, 150, 238);
+  font-family: 'Lucida Grande', sans-serif;
+}
+
+.cardsItems img{
+  height: 250px;
+  
+}
+
+.cardsItems{  
+  height: 350px;
+  width: 300px;
+  padding: 0px;
+  margin-left: 500px;
+  border: solid 1.5px #252221;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px #999;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  background-color: #ff9a02e3;
 }
 
