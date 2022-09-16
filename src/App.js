@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Navbar from './components/navegacion/Navbar'
 import Inicio from './components/paginas/Inicio'
 import Productos from './components/paginas/Productos'
-import Items from './components/paginas/Items'
+import Items from './components/paginas/Contacto'
 import { render } from '@testing-library/react';
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './components/ItemListContainer';

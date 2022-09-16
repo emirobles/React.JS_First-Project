@@ -2,7 +2,7 @@ import React from 'react';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList'
 
-const ItemDetail =({item})=> (
+const ItemDetail =({item})=> (  
   <div className='detailedInfo'>
     <div className='cardItem'>
       <h2>Información detallada</h2>

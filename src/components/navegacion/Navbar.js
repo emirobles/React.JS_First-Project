@@ -20,9 +20,9 @@ function ColorSchemesExample() {
                         />
                     </Navbar.Brand>                    
                     <Nav className="me-auto">                        
-                        <Nav.Link href="#home">Inicio</Nav.Link>
-                        <Nav.Link href="#features">Productos</Nav.Link>
-                        <Nav.Link href="#pricing">Items</Nav.Link>
+                        <Nav.Link to={"/"}>Inicio</Nav.Link>
+                        <Nav.Link to={`/productos/`}>Productos</Nav.Link>
+                        <Nav.Link to={`/contacto/`}>Contacto</Nav.Link>
                     </Nav>
                     <CartWidget></CartWidget>
                 </Container>
