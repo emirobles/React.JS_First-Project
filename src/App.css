@@ -77,7 +77,7 @@ h1 {
 .cardItem{
   background-color: #252221;
   padding: 20px;
-  height: 650px;
+  height: 730px;
   width: 450px;  
   margin-left: 500px;
 }
@@ -110,3 +110,26 @@ h1 {
   background-color: #ff9a02e3;
 }
 
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+  border: solid 1px #320d08;
+  background-color: #faae6f;
+}
+
+.btn-circle-two {
+  border: solid 1px #322108;
+  background-color: #f7d052;
+}
+
+.contador {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
