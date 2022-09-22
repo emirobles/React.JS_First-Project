@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Routes} from 'react-router-dom'
 import Navbar from './components/navegacion/Navbar'
 import Inicio from './components/paginas/Inicio'
 import Productos from './components/paginas/Productos'
@@ -16,23 +16,20 @@ import { getItem } from './api';
 
 const App = () => {
   const [item, setItem] = useState({});
-  useEffect(() => {
-    getItem().then(valor => setItem(valor));
-  }, []);
-  const onAdd = (valor) => {
-    console.log(`Compraste ${valor} productos`);
-  }
+  
   return (
-    <div className="App">         
-      <Navbar></Navbar>      
-      <ItemListContainer nombre="Andres" apellido="Nazzari" ></ItemListContainer>
-        
-      <ItemDetailContainer item= {item}/>          
-         
+    <>    
+    <Routes>
+      <Route path="/components/navegacion/Navbar" element={<Navbar/>}></Route>      
+      <Route path="/components/ItemListContainer" element={<ItemListContainer nombre="Andres" apellido="Nazzari"/>}></Route>
+      <Route path="/components/ItemDetailContainer" element={<ItemDetailContainer item={item} />}></Route>
+    </Routes>  
+    <div className="App"> 
       <footer className='App-footer'>
         <p> By Emilce Robles </p>
       </footer>
     </div>
+    </>
   );
 }
 

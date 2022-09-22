@@ -10,7 +10,7 @@ function ColorSchemesExample() {
         <>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand Link to = "../app.js">
                         <img
                             src={logo}
                             width="150"

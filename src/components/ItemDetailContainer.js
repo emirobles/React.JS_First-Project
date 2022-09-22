@@ -4,13 +4,12 @@ import ItemDetail from './ItemDetail';
 
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({});
+    const [product, setProduct,] = useState({});    
     useEffect(() => {
 
         getItem().then( (product) => {
             setProduct(product);
-        });
-
+        });        
         /*const getProduct = async() => {
             const product = await getItem(item.id);
             setProduct(product);
